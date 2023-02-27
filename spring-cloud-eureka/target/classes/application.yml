@@ -1,0 +1,19 @@
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # false表示eureka不向注册中心注册自己
+    register-with-eureka: false
+    # false表示只需要维护实例，不需要检索实例
+    fetch-registry: false
+    service-url:
+      # 单机版
+      defaultZone: http://localhost:7001/eureka
+      # 集群版
+      #defaultZone: http://ip1:7001/eureka,http://ip2:7001/eureka
+  # false 关闭自我保护机制,默认是开启
+#  server:
+#    enable-self-preservation: false
+
